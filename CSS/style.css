@@ -2,10 +2,10 @@
 :root{
     --blanco: #ffffff;
     --oscuro: #212121;
-    --primario: #ffc107;
+    --primario: #17ff07;
     --secundario:#c9a438;
     --gris: #757575;
-    --glassGris: #66dcd2a6;
+    --glassGris: #3b79e4a6;
 
 
 }
@@ -42,10 +42,23 @@ body{
 
 .navegacion-principal {
     padding-bottom: 10rem;
+    /*
     background-color: var(--secundario);
+    */
 }
 .navegacion-principal {
-    padding: 2rem;
+    padding: 1rem;
+    display: flex;
+    /* 
+        justify-content: space-between; para filas 
+        aling.item para columnas(flex direction)
+
+    */
+    justify-content: space-between;
+    font-size: 2rem;
+
+    font-weight: bold;
+    
 }
 
 .contenedor{
@@ -59,15 +72,21 @@ body{
 
 }
 .nav-bg{
-    background-color: var(--gris);
+    background-color: var(--glassGris);
 }
 
 
 .navegacion-principal a{
+        /*
+}
     color: var(--blanco);
-    text-decoration: dashed;
     background-color: var(--primario);
-    display: block;
+    */
+    color: var(--blanco);
+
+    text-decoration: none;
+
+    display: line;
 
 }
 
@@ -78,4 +97,10 @@ clases no llevan . al principio
 p{
     background-color: var(--glassGris);
 }
-
+   /*
+.navegacion-principal a:focus{    */
+.navegacion-principal a:hover{
+    padding: 1rem;
+    background-color: var(--secundario);
+    color: var(--oscuro);
+}
