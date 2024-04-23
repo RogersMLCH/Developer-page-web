@@ -104,3 +104,27 @@ p{
     background-color: var(--secundario);
     color: var(--oscuro);
 }
+   /*
+tamaños recomendados para media query     
+480px para moviles
+768px tablets 
+1140px laptops
+1400px display pro 
+
+*/
+body{ background-color: #85f07d;}
+
+@media (min-width: 480px) {
+    body{
+        background-color: blue;
+
+    }
+}
+
+@media (min-width: 768px) {
+    body{
+        background-color: cornflowerblue;
+
+    }
+}
+
