@@ -1,14 +1,12 @@
 /*Custom properties*/
 
-:root {
+:root{
     --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #ffc107;
-    --secundario: #0d5b26;
-    --tercero: orange;
+    --secundario: #0097a7;
     --gris: #757575;
 }
-
 html {
     font-size: 62.5%;
     /*Hack para box model*/
@@ -48,6 +46,7 @@ h3 {
     text-align: center;
 }
 
+
 .titulo {
     text-align: center;
 }
@@ -65,6 +64,10 @@ h3 {
 }
 
 .navegacion-principal {
+    background-color: var(--secundario);
+}
+
+.nav-bg {
     background-color: var(--secundario);
 }
 
@@ -186,7 +189,7 @@ h3 {
     /*Poner texto en negritas*/
     border-radius: .5rem;
     /*Esquinas redondeadas*/
-
+    width: 90%; /* Ancho del botón */
     /*Centrar el texto del botón*/
     text-align: center;
 }
@@ -208,3 +211,39 @@ h3 {
     padding: 2rem;
     border-radius: 1rem;
  }
+
+ @media (min-width: 768px){
+   .servicios{
+    display: grid;
+    /*     grid-template-columns: 1fr 1fr 1fr;*/
+    /*grid-template-columns: 50% 25% 25%; */
+    grid-template-columns: repeat(3,1fr);
+   }
+
+   .servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicio h3 {
+    color: var(--secundario);
+    font-weight: center;
+  }
+
+  .servicio p{
+    text-align: center;
+    line-height: 2;
+  }
+
+  .servicio .iconos{
+        height: 15rem;
+        width: 15rem;
+        background-color: var(--primario);
+        border-radius: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+  }
+  }
+
