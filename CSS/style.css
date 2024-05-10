@@ -6,6 +6,8 @@
     --primario: #ffc107;
     --secundario: #0097a7;
     --gris: #757575;
+    --grisClaro: #dfe9f3;
+
 }
 html {
     font-size: 62.5%;
@@ -46,21 +48,8 @@ h3 {
     text-align: center;
 }
 
-
-.titulo {
-    text-align: center;
-}
-
-.titulo1 {
-    padding-top: 80px;
-    text-align: center;
-    color: white;
-    font-size: xx-large;
-}
-
 .titulo span {
     font-size: 2rem;
-    color: rgb(0, 247, 255);
 }
 
 .navegacion-principal {
@@ -72,7 +61,7 @@ h3 {
 }
 
 .contenedor {
-    width: 133rem;
+    max-width: 120rem;
     /*Una manera de poner los 4 márgenes en 4 propiedades
       margin-top: 0;
       margin-bottom: 0;
@@ -83,13 +72,20 @@ h3 {
       y el segundo valor corresponde a right-left*/
 }
 
-.navegacion-principal a {
-    padding: 1rem;
-    color: var(--blanco);
-    /*background-color: var(--primario);*/
-    text-decoration: none;
-    display: block;
+
+.centro1 {
+    display: inline-block;
+    width: 1000px;
+    height: 80px;
 }
+
+.icon {
+    display: inline-block;
+    width: 450px;
+    height: 80px;
+    padding-left: 350px;
+}
+
 
 .navegacion-principal {
     display: flex;
@@ -110,31 +106,19 @@ h3 {
     }
 }
 
-.navegacion-principal a:hover {
+
+.navegacion-principal a {
+    padding: 1rem;
+    color: var(--blanco);
+    /*background-color: var(--primario);*/
+    text-decoration: none;
+    display: block;
+}
+
+.navegacion-principal a:hover{
     background-color: var(--primario);
     color: var(--oscuro);
 }
-
-.centro1 {
-    display: inline-block;
-    width: 1000px;
-    height: 80px;
-}
-
-.icon {
-    display: inline-block;
-    width: 450px;
-    height: 80px;
-    padding-left: 350px;
-}
-
-.mer {
-    display: inline-block;
-    width: 200px;
-    height: 80px;
-    font-size: x-large;
-}
-
 
 /*Tamaños recomendados para media query
   480px para móviles
@@ -167,7 +151,7 @@ h3 {
     color: var(--blanco);
 }
 
-.Ubicación {
+.ubicacion {
     display: flex;
     align-items: flex-end;
 }
@@ -192,6 +176,7 @@ h3 {
     width: 90%; /* Ancho del botón */
     /*Centrar el texto del botón*/
     text-align: center;
+    border: none;
 }
 
 @media (min-width: 768px){
@@ -199,6 +184,10 @@ h3 {
     width: auto;
   }
  }
+ 
+ .botton:hover{
+    cursor: pointer;
+  }
 
  .sombra{
     margin-top: 2rem;
@@ -228,7 +217,7 @@ h3 {
 
   .servicio h3 {
     color: var(--secundario);
-    font-weight: center;
+    font-weight: normal;
   }
 
   .servicio p{
@@ -247,3 +236,88 @@ h3 {
   }
   }
 
+  /* contacto */
+  .formulario
+  {
+    background-color: var(--gris);
+    /* formula para no usar media query*/
+    width: min(60rem,100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  .formulario fieldset
+  {
+    border: none;
+  }
+
+.formulario legend
+{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--primario);
+}
+
+@media (min-width: 768px){
+    .contenedor-campos
+    {
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   column-gap: 1rem;
+   grid-template-columns: auto auto 20rem;/* el espacio de cada fila */
+
+    }
+    /* 10th-child */
+    /* nth-child se le va a dar el valor al hijo, el padre es el contendor, cambiar los ultimos 2 */
+    .campo:nth-child(3),.campo:nth-child(4){
+    grid-column: 1/3;     /* pone el elemento de la 1 a la 3 */
+
+    }
+ }
+
+.campo label
+{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem ;
+    display: block;
+}
+
+.input-text
+{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.campo textarea{
+    height: 20rem;
+}
+
+.w-sm-100
+{
+    width: 100%;
+}
+@media (min-width: 768px){
+    .w-sm-100
+    {
+        width: auto;   
+    }
+ }
+ .flex
+ {
+    display: flex;
+ }
+
+ .alinear-derecha{
+    justify-content: flex-end;
+ }
+
+ .footer{
+    text-align: center;
+ }
