@@ -311,3 +311,16 @@ y perjudicaba al de icono junto al lugar
  .footer{
     text-align: center;
  }
+
+ @media (max-width: 768px) {
+    .servicio .iconos {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      width: auto;
+      background-color: var(--primario);
+    }
+  }
+  
